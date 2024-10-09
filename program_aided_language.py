@@ -73,7 +73,7 @@ if st.button("Generate Python Code"):
         # Few-shot prompt examples to guide the model's response
         few_shot_examples = """
         Example 1:
-        Natural language: "Find all users in Newyork."
+        Natural language: "Find all users in New York."
         Reasoning: Generate a Cypher query to retrieve all User nodes.
         Python code:
         query = "MATCH (u:User {city: 'New York'}) RETURN u.name, u"
@@ -149,16 +149,10 @@ if st.button("Run Generated Code"):
         # Retrieve and format the results
         results = exec_globals.get('results', None)
         if results is not None:
-            formatted_results = []
-            for record in results:
-                user_data = {
-                    "name": record["u"]["name"],
-                    "city": record["u"]["city"],
-                    "age": record["u"]["age"]
-                }
-                formatted_results.append(user_data)
+            # Use a built-in function to format the results as JSON-like data
+            formatted_results = [dict(record) for record in results]
 
-            # Display query results
+            # Display query results in JSON format
             st.write("Query Results:")
             st.json(formatted_results)
 
