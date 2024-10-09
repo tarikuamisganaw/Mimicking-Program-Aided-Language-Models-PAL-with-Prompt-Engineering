@@ -20,5 +20,5 @@ This reasoning is followed by Python code that translates these steps into Cyphe
 User Interference: After the Python code is generated, the user can modify the code through a text area before executing it. This allows the user to adjust the query or logic and directly interfere with the generated output for better results.
 
 Execution and Display of Results: Once the code is executed, the query results are displayed in a flexible JSON format, which adapts to the structure of the returned records. The system uses exec() to safely execute the modified Python code, and the results are serialized and displayed as JSON for clarity.
-
+here is a demo video:Screencast.from.09-10-2024.10.39.23.webm
 
