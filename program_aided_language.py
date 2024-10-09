@@ -149,7 +149,7 @@ if st.button("Run Generated Code"):
         # Retrieve and format the results
         results = exec_globals.get('results', None)
         if results is not None:
-            # Use a built-in function to format the results as JSON-like data
+           
             formatted_results = [dict(record) for record in results]
 
             # Display query results in JSON format
