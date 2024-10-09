@@ -1,13 +1,15 @@
 Program-Aided Language Model (PAL) with Prompt Engineering for Neo4j Query Generation
 Task Overview
 
-This project explores the concept of Program-Aided Language Models (PAL) through prompt engineering. The objective is to guide a Language Model (LLM) to generate intermediate outputs that resemble a program or structured reasoning process. Additionally, user interaction is provided to "interfere" with these outputs and improve the final result.
+This project explores the concept of Program-Aided Language Models (PAL) through prompt engineering. The objective is to guide a Language Model (LLM) to generate intermediate outputs that resemble a program or structured reasoning process. 
+
 Objectives:
 
 Mimic PAL: Design a system that mimics PAL using prompt engineering techniques.
+
 Structured Reasoning: Guide an LLM (Hugging Face's distilgpt2) to generate intermediate reasoning steps and corresponding Python code that interacts with a Neo4j database.
-User Interference: Allow users to inspect, modify, and improve the generated Python code before execution.
-Final Execution: The system runs the modified Python code and returns query results in a flexible, JSON format.
+
+Final Execution: The system runs the Python code and returns query results in a flexible, JSON format.
 
 How This Project Achieves the PAL Challenge:
 
@@ -16,8 +18,6 @@ Guided Generation of Intermediate Outputs: The LLM is prompted to generate struc
     "Step 2: Return the properties of users."
 
 This reasoning is followed by Python code that translates these steps into Cypher queries.
-
-User Interference: After the Python code is generated, the user can modify the code through a text area before executing it. This allows the user to adjust the query or logic and directly interfere with the generated output for better results.
 
 Execution and Display of Results: Once the code is executed, the query results are displayed in a flexible JSON format, which adapts to the structure of the returned records. The system uses exec() to safely execute the modified Python code, and the results are serialized and displayed as JSON for clarity.
 here is a demo video:[Screencast from 09-10-2024 10:39:23 ከሰዓት.webm](https://github.com/user-attachments/assets/8b2914ee-8f8a-4b07-9ed5-36a71193f437)
